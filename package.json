@@ -1,0 +1,21 @@
+{
+  "name": "video-transcriber",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend",
+    "shared"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=frontend & npm run dev --workspace=backend",
+    "build": "npm run build --workspace=shared && npm run build --workspace=frontend && npm run build --workspace=backend",
+    "start": "npm run start --workspace=backend"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.58.2"
+  }
+}
